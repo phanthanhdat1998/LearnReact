@@ -1,0 +1,6 @@
+sử dụng câu lệnh dưới để set port:
+set port=4200 && react-scripts start
+
+check version react:
+npm view react version
+npm view react-native version
