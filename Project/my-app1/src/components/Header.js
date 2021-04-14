@@ -12,7 +12,7 @@ const Header = () => {
       <Router>
         <div>
           <Navbar bg="light" expand="md">
-            <Navbar.Brand href="/">My App</Navbar.Brand>
+            <Navbar.Brand href="/">App Todo</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
