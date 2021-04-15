@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar, Nav, Button, Form, FormControl } from "react-bootstrap";
 import "../App.css";
-import Home from "../pages/Home";
+import Todo from "../pages/Todo";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 
@@ -17,7 +17,7 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto">
                 <Nav.Link href="/" className="active">
-                  Home
+                  Todo
                 </Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
                 <Nav.Link href="/contact">Contact</Nav.Link>
@@ -34,7 +34,7 @@ const Header = () => {
           </Navbar>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Todo} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
             </Switch>

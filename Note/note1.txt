@@ -4,3 +4,28 @@ set port=4200 && react-scripts start
 check version react:
 npm view react version
 npm view react-native version
+
+// loop mảng trong js
+  // const listTodo = [];
+
+  // for (let todo of todoState) {
+  //   listTodo.push(<li>{todo}</li>);
+  // }
+  // arrayJob.forEach((arrayJob) => {
+  //   listTodo.push(<li>{arrayJob}</li>);
+  // });
+  // for (let i = 0; i < arrayJob.length; i++) {
+  //   listTodo.push(<li>{arrayJob[i]}</li>);
+  // }
+  // const listTodo = arrayJob.map((job, key) => <li key={key}>{job}</li>);
+
+State là thể hiện cái trạng thái của component, có thể là trạng thái ban đàu or trạng thái thay đổi.
+SetStae dùng để thay đổi nội dung của State
+
+Phương thức filter() dùng để tạo một mảng mới với tất cả các phần tử thỏa điều kiện của một hàm test.
+
+// Sử dụng uuid để tạo ra id mới
+
+useState để làm gì? Nó khai báo một "biến trạng thái"
+
+// viet tat cu phap react rafce
