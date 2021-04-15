@@ -24,8 +24,11 @@ SetStae dùng để thay đổi nội dung của State
 
 Phương thức filter() dùng để tạo một mảng mới với tất cả các phần tử thỏa điều kiện của một hàm test.
 
-// Sử dụng uuid để tạo ra id mới
+Sử dụng uuid để tạo ra id mới
 
 useState để làm gì? Nó khai báo một "biến trạng thái"
 
-// viet tat cu phap react rafce
+Viết tắt cú pháp react: rafce
+
+Cú pháp tạo project: npx create-react-app name_project
+

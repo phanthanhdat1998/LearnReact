@@ -2,7 +2,13 @@ import React from 'react'
 import PropTypes from "prop-types";
 
 
-const TodoItem = ({ todoProps,deleteTodoItem }) => <li className="todo-item" onClick={()=>{deleteTodoItem(todoProps.id)}}>{todoProps.title}</li>
+const TodoItem = ({ todoProps,deleteTodoItem }) => {
+  return(
+    <li className="todo-item" onClick={()=>{deleteTodoItem(todoProps.id)}}>
+      {todoProps.title}
+    </li>
+    )
+}
 
 // PropTypes
 TodoItem.propTypes = {

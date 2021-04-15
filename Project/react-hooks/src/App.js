@@ -1,13 +1,16 @@
-import React from 'react';
-import Navbar from './components/Navbar'
-import Todo from './components/Todo'
+import React from "react";
+import Navbar from "./components/Navbar";
+import Todo from "./components/Todo";
+import ThemeContextProvider from "./context/ThemeContext";
 
 const App = () => {
   return (
-  <div className="App">
-    <Navbar/>
-    <Todo/>
-  </div>
+    <div className="App">
+      <ThemeContextProvider>
+        <Navbar />
+        <Todo />
+      </ThemeContextProvider>
+    </div>
   );
 };
 
