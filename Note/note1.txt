@@ -67,3 +67,7 @@ localStorage.removeItem(key);
 Hoặc xóa tất cả các biến trong localStorage, sử dụng clear
 
 localStorage.clear();
+
+------------- REDUX -----------------
+
+library redux install: npm i redux react-redux redux-thunk redux-devtools-extension axios
