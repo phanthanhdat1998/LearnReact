@@ -32,3 +32,38 @@ Viết tắt cú pháp react: rafce
 
 Cú pháp tạo project: npx create-react-app name_project
 
+
+JSON.stringify() là một hàm kinh điển trong Javascript để chuyển một Object sang JSON
+
+
+------------- Local storage --------------
+chỉ nhận giá trị là String
+Khả năng lưu trữ vô thời hạn: Có nghĩa là chỉ bị xóa bằng JavaScript, hoặc xóa bộ nhớ trình duyệt, hoặc xóa bằng localStorage API.
+Lưu trữ được 5MB: Local Storage cho phép bạn lưu trữ thông tin tương đối lớn lên đến 5MB, lưu được lượng thông tin lớn nhất trong 3 loại.
+Không gửi thông tin lên server như Cookie nên bảo mật tốt hơn.
+
+Khởi tạo localStorage: 
+
+localStorage.setItem('key', 'value');
+// hoặc
+localStorage.key = 'value';
+// hoặc
+localStorage['key'] = 'value';
+
+Trong đó: key là tên biến, value là giá trị của biến muốn gán vào.
+
+Để lấy giá trị localStorage và sử dụng, ta dùng getItem
+
+localStorage.getItem('key');
+// hoặc
+localStorage.key;
+
+Để lấy số lượng localStorage đã có trong trình duyệt, sử dụng length như sau:
+localStorage.length();
+
+Để xóa 1 biến trong localStorage, sử dụng removeItem(tên_key)
+localStorage.removeItem(key);
+
+Hoặc xóa tất cả các biến trong localStorage, sử dụng clear
+
+localStorage.clear();
