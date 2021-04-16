@@ -4,7 +4,7 @@ export const ThemeContext = createContext();
 
 const ThemeContextProvider = ({ children }) => {
   const listTheme = {
-    islightTheme: true,
+    isLightTheme: false,
     light: {
       background: "rgb(219, 219, 219)",
       color: "#000",
@@ -14,15 +14,23 @@ const ThemeContextProvider = ({ children }) => {
       color: "#fff",
     },
   };
+  
   //State
   const [theme, setTheme] = useState(listTheme);
 
+  //Function to toggle theme
+  const toggleTheme = () =>{
+    setTheme({
+      ...theme,isLightTheme: !theme.isLightTheme,
+    })
+  }
+
   //Context data
   const themeContextData = {
-    theme,
+    theme,toggleTheme
   };
-  //Return provider
 
+  //Return provider
   return (
     <ThemeContext.Provider value={themeContextData}>
       {children}

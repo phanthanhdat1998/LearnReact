@@ -1,20 +1,22 @@
-import React from 'react'
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
+import { TodoContext } from "../contexts/TodoContext";
+import { DELETE_TODO } from "../reducers/types";
 
-
-const TodoItem = ({ todoProps,deleteTodoItem }) => {
-  return(
-    <li className="todo-item" onClick={()=>{deleteTodoItem(todoProps.id)}}>
+const TodoItem = ({ todoProps }) => {
+  const { dispatch } = useContext(TodoContext);
+  return (
+    <li
+      className="todo-item"
+      onClick={() => {
+        dispatch({
+          type: DELETE_TODO,
+          payload: { id: todoProps.id },
+        });
+      }}
+    >
       {todoProps.title}
     </li>
-    )
-}
+  );
+};
 
-// PropTypes
-TodoItem.propTypes = {
-    todoProps: PropTypes.object.isRequired,
-    deleteTodoItem:PropTypes.func.isRequired
-  };
-  
-
-export default TodoItem
+export default TodoItem;

@@ -12,13 +12,12 @@ code {
     monospace;
 }
 .App {
-  background: rgb(219, 219, 219);
   width: 90%;
   min-height: 900px;
   margin: 20px auto;
 }
-.navbar {
-}
+/* .navbar {
+} */
 .navbar ul {
   display: flex;
   justify-content: center;
@@ -28,11 +27,16 @@ code {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #000;
+  /* color: #000; */
   cursor: pointer;
 }
 .navbar ul li:hover {
   color: blue;
+}
+.navbar span {
+  font-size: 15px;
+  margin-right: 10px;
+  text-transform: none;
 }
 li {
   list-style-type: none;
@@ -43,6 +47,7 @@ li {
 .todo-list li {
   text-align: center;
   background: #fff;
+  color: #000 !important;
   min-width: 200px;
   display: inline-block;
   padding: 20px;
@@ -55,8 +60,8 @@ li {
 .todo-list li:hover {
   cursor: pointer;
   opacity: 0.7;
-  color: #fff;
-  background-color: rgb(196, 112, 86);
+  color: #fff !important;
+  background-color: rgb(50, 180, 212);
   text-decoration: line-through;
 }
 .form-todo {
@@ -82,4 +87,23 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+.toggle-btn {
+  text-align: center;
+  margin: 20px 0px;
+}
+.toggle-btn button:hover {
+  background: rgb(218, 214, 33);
+}
+button {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+}
+.not-auth {
+  text-align: center;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
 }
