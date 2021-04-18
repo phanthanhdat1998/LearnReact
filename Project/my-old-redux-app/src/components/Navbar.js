@@ -3,13 +3,14 @@ import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
 
 const Navbar = ({ todos }) => {
+  const lengthTodo = todos.length;
   return (
     <div className="navbar">
       <h1>My react todo app</h1>
       <ul>
         <li>Home</li>
         <li>About</li>
-        <li>Total todos: {todos.length}</li>
+        <li>Total todos: {lengthTodo}</li>
       </ul>
     </div>
   );

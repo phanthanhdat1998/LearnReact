@@ -36,6 +36,12 @@ Cú pháp tạo project: npx create-react-app name_project
 JSON.stringify() là một hàm kinh điển trong Javascript để chuyển một Object sang JSON
 
 
+Nếu muốn return về 1 object trong es6 thì phải mở ngoặc tròn
+vd: 
+const mapStateToProps = (state) => ({
+  todos: state.myTodos.todos,
+});
+
 ------------- Local storage --------------
 chỉ nhận giá trị là String
 Khả năng lưu trữ vô thời hạn: Có nghĩa là chỉ bị xóa bằng JavaScript, hoặc xóa bộ nhớ trình duyệt, hoặc xóa bằng localStorage API.
@@ -71,3 +77,5 @@ localStorage.clear();
 ------------- REDUX -----------------
 
 library redux install: npm i redux react-redux redux-thunk redux-devtools-extension axios
+
+use thunk from redux-thunk được use khi gọi asynchronous, vd gửi http request tới api nào đấy.
