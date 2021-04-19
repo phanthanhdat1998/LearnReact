@@ -79,3 +79,5 @@ localStorage.clear();
 library redux install: npm i redux react-redux redux-thunk redux-devtools-extension axios
 
 use thunk from redux-thunk được use khi gọi asynchronous, vd gửi http request tới api nào đấy.
+
+install redux kiểu mới npx create-react-app my-new-redux-app --template redux
