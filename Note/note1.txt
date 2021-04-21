@@ -86,3 +86,9 @@ install redux kiểu mới npx create-react-app my-new-redux-app --template redu
 -------------HOOKS----------------
 Khi nào dùng state,life cycle, mà không thích làm việc với class(OOP)
 Lưu ý: Chỉ sử dụng được cho functional component, không dùng cho class
+---useEffect---
+
+ dependencies null luôn luôn chạy sau khi render
+ dependencies [] chỉ chạy 1 lần sau khi render
+ dependencies [filters] chạy sau khi render, nếu filters thay đổi thì useEffect nó mới gọi. 
+ nếu filters không thay đỏi thì useEffect không chạy
