@@ -6,6 +6,7 @@ import axios from "axios";
 import queryString from "query-string";
 import PostList from "./PostList";
 import Pagination from "./Pagination";
+import PostFiltersForm from "./PostFiltersForm";
 
 const TodoList = () => {
   const TodoList = [
@@ -23,6 +24,7 @@ const TodoList = () => {
   const [filters, setFilters] = useState({
     _limit: 10,
     _page: 1,
+    title_like: "",
   });
   useEffect(() => {
     const getPostList = async () => {
@@ -78,6 +80,15 @@ const TodoList = () => {
     ];
     setTodo(newTodos);
   };
+  const handleFiltersChange = (newFilters) => {
+    console.log("newFilters", newFilters);
+    setFilters({
+      ...filters,
+      _page: 1,
+      title_like: newFilters.searchTerm,
+    });
+  };
+
   return (
     <ul className="todo-list">
       <h2>React hooks - Post list</h2>
@@ -87,6 +98,7 @@ const TodoList = () => {
           <TodoItem todosProp={todo} key={todo.id} onTodoClick={handleClick} />
         );
       })} */}
+      <PostFiltersForm onSubmitSearch={handleFiltersChange} />
       <PostList posts={postList} />
       <Pagination pagination={pagination} onPageChange={handlePageChange} />
     </ul>

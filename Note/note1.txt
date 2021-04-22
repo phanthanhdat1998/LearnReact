@@ -35,6 +35,7 @@ Cú pháp tạo project: npx create-react-app name_project
 
 JSON.stringify() là một hàm kinh điển trong Javascript để chuyển một Object sang JSON
 
+JSON.parse() nhận vào một chuỗi JSON và chuyển đổi (transform) nó thành một đối tượng JavaScript.
 
 Nếu muốn return về 1 object trong es6 thì phải mở ngoặc tròn
 vd: 
@@ -92,3 +93,12 @@ Lưu ý: Chỉ sử dụng được cho functional component, không dùng cho c
  dependencies [] chỉ chạy 1 lần sau khi render
  dependencies [filters] chạy sau khi render, nếu filters thay đổi thì useEffect nó mới gọi. 
  nếu filters không thay đỏi thì useEffect không chạy
+
+--- Debounce ---
+Debounce là một phương pháp hay kỹ thuật giúp chúng ta cải thiện performance, khi sử dụng Debounce chúng ta sẽ giảm thiểu
+số lần ứng dụng phải xử lý những sự kiện liên tục
+Debounce function buộc một hàm phải đợi một khoảng thời gian nhất định trước khi nó được chạy lại. 
+Hàm được xây dựng để giới hạn số lần một hàm được gọi.
+Sử dụng useRef 
+--- useRef ---
+giá trị được giữ nguyên không thay đổi giữa các lần render
