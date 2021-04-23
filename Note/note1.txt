@@ -83,6 +83,9 @@ use thunk from redux-thunk được use khi gọi asynchronous, vd gửi http re
 
 install redux kiểu mới npx create-react-app my-new-redux-app --template redux
 
+Redux sử dụng kiến trúc 1 chiều: uni-directional data flow
+
+Chỉ nên setup 1 store duy nhất
 
 -------------HOOKS----------------
 Khi nào dùng state,life cycle, mà không thích làm việc với class(OOP)
@@ -100,5 +103,12 @@ số lần ứng dụng phải xử lý những sự kiện liên tục
 Debounce function buộc một hàm phải đợi một khoảng thời gian nhất định trước khi nó được chạy lại. 
 Hàm được xây dựng để giới hạn số lần một hàm được gọi.
 Sử dụng useRef 
+
 --- useRef ---
 giá trị được giữ nguyên không thay đổi giữa các lần render
+
+--- useSelector ---
+Dùng để lấy state trong store - react hook redux 
+
+--- useDispatch ---
+Dùng để sử dụng dispatch trong - react hook redux
