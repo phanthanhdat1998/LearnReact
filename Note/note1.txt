@@ -112,3 +112,6 @@ Dùng để lấy state trong store - react hook redux
 
 --- useDispatch ---
 Dùng để sử dụng dispatch trong - react hook redux
+
+---- use scss ----
+npm i node-sass
