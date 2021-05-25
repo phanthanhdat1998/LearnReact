@@ -4,14 +4,13 @@ import store from "./store/store";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Todos from "./components/Todos";
+import Photos from "./components/Photos";
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <Navbar />
-        <Todos />
-      </div>
+      <Navbar />
+      <Photos />
     </Provider>
   );
 }
