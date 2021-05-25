@@ -1,17 +1,17 @@
 import { v4 as uuidv4 } from "uuid";
 
 const initialState = {
-  todos: [
-    { id: uuidv4(), title: "Viec 1", completed: false },
-    { id: uuidv4(), title: "Viec 2", completed: false },
-    { id: uuidv4(), title: "Viec 3", completed: false },
-    { id: uuidv4(), title: "Viec 4", completed: false },
-    { id: uuidv4(), title: "Viec 5", completed: false },
-  ],
+  todos: [],
 };
 
 const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
+    case "GET_TODO":
+      return {
+        ...state,
+        todos: payload,
+      };
+
     case "MARK_COMPLETE":
       return {
         ...state,
@@ -20,12 +20,18 @@ const todoReducer = (state = initialState, { type, payload }) => {
           return todo;
         }),
       };
+
     case "CREATE_TODO":
       return {
         ...state,
         todos: [...state.todos, payload],
       };
 
+    case "DELETE_TODO":
+      return {
+        ...state,
+        todos: state.todos.filter((todo) => todo.id !== payload),
+      };
     default:
       return state;
   }

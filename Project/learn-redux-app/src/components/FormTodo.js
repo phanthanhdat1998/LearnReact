@@ -8,7 +8,6 @@ const FormTodo = ({ createTodo }) => {
   const [title, setTitle] = useState("");
   const onTitleChange = (e) => {
     setTitle(e.target.value);
-    console.log(e.target.value);
   };
   const handelSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +17,6 @@ const FormTodo = ({ createTodo }) => {
         title,
         completed: false,
       };
-      // console.log(newTodo);
       createTodo(newTodo);
     }
     setTitle("");
